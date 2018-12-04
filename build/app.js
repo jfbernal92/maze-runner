@@ -43,7 +43,6 @@ mongoose.connect(conString, function (err) {
 });
 
 // SERVER SETTINGS
-app.set("port", 8080);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(function (req, res, next) {
@@ -52,8 +51,8 @@ app.use(function (req, res, next) {
     next();
 });
 
-server.listen(app.get("port"), function () {
-    console.log('Listening on http://localhost:' + server.address().port);
+server.listen(process.env.PORT || 8080, function () {
+    console.log('Listening on port: ' + server.address().port);
 });
 
 app.use('/getTimes', function (req, res) {

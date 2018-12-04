@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf build && mkdir build",
     "build-babel-server": "babel -d ./build ./server -s",
-    "build-babel-client": "babel -d ./build ./client -s && cp -r client/assets build/assets/",  
+    "build-babel-client": "babel -d ./build ./client -s && cp -r client/assets dist/assets/",  
     "build": "npm run clean && npm run build-babel-server && npm run build-babel-client",
     "start": "npm run build && node ./build/app.js"
   },
