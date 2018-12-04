@@ -1,0 +1,1 @@
+{"version":3,"sources":["../client/index.js"],"names":["window","game","Client"],"mappings":";;AAAA;;;;;;AAEAA,OAAOC,IAAP,GAAc,IAAIC,cAAJ,EAAd","file":"index.js","sourcesContent":["import Client from \"./Game\";\n\nwindow.game = new Client();\n"]}
