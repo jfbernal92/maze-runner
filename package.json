@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "rm -rf dist && mkdir dist && cp -r client/assets dist/assets/ && node ."
+      "start": "node index.js"
   },
   "author": "jrusly",
   "license": "MIT",
