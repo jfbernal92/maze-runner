@@ -9,7 +9,5 @@ Game App developed in JS with Phaser 3 Framework.
 
 ## Build Commands
 ``
-
 npm start
-
 ``
