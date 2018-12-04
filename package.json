@@ -9,7 +9,8 @@
         "dev-server": "nodemon ./src/server/server.js",
         "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\"",
         "deploy": "webpack --config webpack.production.config.js",
-        "test": "eslint './src/**/*.js'"
+        "test": "eslint './src/**/*.js'",
+        "start": "npm run dev"
     },
     "license": "MIT",
     "devDependencies": {
