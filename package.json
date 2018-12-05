@@ -4,11 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "clean": "rm -rf build && mkdir build",
+    "clean": "rm -rf build && mkdir build && rm -rf dist && mkdir dist",
     "build-babel-server": "babel -d ./build ./server -s",
-    "build-babel-client": "babel -d ./build ./client -s && cp -r client/assets dist/assets/",  
+    "build-babel-client": "babel -d ./build ./client -s && cp -r client/assets dist/assets/",
     "build": "npm run clean && npm run build-babel-server && npm run build-babel-client",
-    "start": "npm run build && node ./build/app.js"
+    "start": "npm run build && node index"
   },
   "author": "jrusly",
   "license": "MIT",
@@ -29,7 +29,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0"
   },
-    "engines": {
+  "engines": {
     "node": "10.12.0"
   }
 }
