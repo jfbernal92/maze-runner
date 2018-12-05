@@ -11,6 +11,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         // scale our player
         this.setScale(0.5);
     }
+
     update(cursors) {
         this.setVelocity(0);
         if (cursors.up.isDown) {
@@ -24,14 +25,15 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         }else{
             this.direction = 'stop';
             if(this.anims.isPlaying){
-                
+                // Stopping the current animation with a matching frame
                 this.anims.setCurrentFrame(this.anims.currentAnim.getFrameAt(0));
-            }
-            
+            } 
         }
-
     }
 
+    /*
+    * Method to handle the animations and setting the velocity easily.
+    */
     go(vX, vY, direction){
         this.setVelocityX(vX);
         this.setVelocityY(vY);

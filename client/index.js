@@ -1,4 +1,7 @@
 /*jshint esversion:6*/
+/*
+* This class will load the game using the Config, Boot and GameScene class.
+*/
 import 'phaser';
 import config from './config';
 import GameScene from './Scenes/GameScene.js';

@@ -23,8 +23,10 @@ export default class BootScene extends Phaser.Scene {
         
     }
     create() {
-        this.scene.start('GameScene');  
+        //Create animations
         this.createAnimations();
+        //Start the main Scene, "GameScene"
+        this.scene.start('GameScene'); 
     }
 
     createAnimations(){
@@ -74,13 +76,12 @@ export default class BootScene extends Phaser.Scene {
     }
 }
 
-// Marcador de tiempo
-
+//Ajax POST request to get the records solving the maze.
 $.ajax({
     type: "POST",
     url: 'getTimes',
-    success:function(data){ //success es una funcion que se utiliza si el servidor retorna informacion
-        data.forEach(d => {
+    success:function(data){ 
+        data.forEach(d => { //append a new row to the table for each record.
             $('#marcador').append('<tr><td>'+d.user+'</td><td>'+d.h+':'+d.m+':'+d.s+'</td></tr>');
         });
         
