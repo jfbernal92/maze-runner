@@ -8,6 +8,8 @@ Game App developed in JS with Phaser 3 Framework.
 - Parcel-bundler
 
 ## Build Commands
-``
+```console
+npm install
+
 npm start
-``
+```
